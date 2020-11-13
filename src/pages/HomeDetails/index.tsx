@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Modal, ScrollView } from 'react-native';
+import { View, Text, Image, Modal, ScrollView, Linking, Platform } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { FontAwesome5, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -33,6 +33,17 @@ function HomeDetails(){
         Alert.alert("Info", "Ops que pena! Funcionalidade ainda não criada")
     }
 
+    function handleToMessage(){
+
+        const url = `sms:${params.number}${Platform.OS === "ios" ? "&" : "?"}body=${""}`
+
+        Linking.openURL(url);
+    }
+
+    function handleToCall(){
+        Linking.openURL(`tel:${params.number}`);
+    }
+
     return(
         <View style={styles.container}>
             <Header title="Detalhes" left={(
@@ -47,10 +58,10 @@ function HomeDetails(){
                     <Text style={styles.textBox1}>{params.name}</Text>
                 </View>
                 <View style={styles.mainBox2}>
-                    <ButtonIcon name="call" text="Call"/>
-                    <ButtonIcon name="message" text="Message"/>
-                    <ButtonIcon name="videocam" text="Video"/>
-                    <ButtonIcon name="email" text="Email"/>
+                    <ButtonIcon name="call" text="Call" func={handleToCall}/>
+                    <ButtonIcon name="message" text="Message" func={handleToMessage}/>
+                    <ButtonIcon name="videocam" text="Video" func={handlePage404}/>
+                    <ButtonIcon name="email" text="Email" func={handlePage404}/>
                 </View>
 
                 <View style={styles.mainBox3}>

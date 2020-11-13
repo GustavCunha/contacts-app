@@ -6,17 +6,16 @@ import styles from './style';
 interface ButtonIconProps{
     name: string;
     text: string;
+    func: Function | undefined;
 }
 
-const ButtonIcon: React.FC<ButtonIconProps> = ({name, text}) => {
+const ButtonIcon: React.FC<ButtonIconProps> = ({name, text, func}) => {
 
-    function handlePage404(){
-        Alert.alert("Info", "Ops que pena! Funcionalidade ainda não criada")
-    }
+
 
     return(
         <>
-            <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={handlePage404}>
+            <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={func}>
                 <MaterialIcons name={name} size={36} color="#7D3F53"/>
                 <Text style={styles.text}>{text}</Text>
             </TouchableOpacity>
