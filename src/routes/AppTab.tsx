@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {MaterialIcons} from '@expo/vector-icons';
 import AppStack from './AppStack';
 import BitcoinStack from './BitcoinStack';
+import SmartphoneStack from './SmartphoneStack';
 const Tab = createBottomTabNavigator();
 
 export default function AppTab(){
@@ -14,7 +15,7 @@ export default function AppTab(){
                     elevation: 0,
                     shadowOpacity: 0,
                     height: 75,
-                    
+
                 },
                 tabStyle:{
                     alignItems:"center",
@@ -35,8 +36,8 @@ export default function AppTab(){
                 inactiveTintColor: '#c1bccc',
                 activeTintColor: '#7D3F53'
             }}>
-                <Tab.Screen 
-                    name="AppStack" 
+                <Tab.Screen
+                    name="AppStack"
                     component={AppStack}
                     options={{
                         tabBarLabel: 'Gustavo',
@@ -47,8 +48,8 @@ export default function AppTab(){
                         }
                     }}
                 />
-                <Tab.Screen 
-                    name="BitcoinStack" 
+                <Tab.Screen
+                    name="BitcoinStack"
                     component={BitcoinStack}
                     options={{
                         tabBarLabel: 'Felipe',
@@ -59,9 +60,9 @@ export default function AppTab(){
                         }
                     }}
                 />
-                <Tab.Screen 
-                    name="Teste1" 
-                    component={AppStack}
+                <Tab.Screen
+                    name="SmartphoneStack"
+                    component={SmartphoneStack}
                     options={{
                         tabBarLabel: 'Leonardo',
                         tabBarIcon: () => {
