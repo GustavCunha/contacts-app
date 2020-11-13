@@ -34,8 +34,8 @@ function SmartphoneDetails() {
   return (
     <View style={styles.container}>
       <Header title="Detalhes" left={(
-        <RectButton style={{position: 'absolute', left: 25, top: 35}} onPress={goBack}>
-          <FontAwesome5 name="arrow-left" size={24} color="#FFF" />
+        <RectButton style={{position: 'absolute', left: 25, top: 50}} onPress={goBack}>
+          <FontAwesome5 name="arrow-left" size={28} color="#FFF" />
         </RectButton>
       )}/>
 
@@ -51,7 +51,7 @@ function SmartphoneDetails() {
 
       <RectButton style={styles.button} onPress={go404Page}>
         <MaterialIcons name="edit" size={24} color="#FAFAFA"/>
-        <Text style={styles.textButton}>Edit Contact</Text>
+        <Text style={styles.textButton}>Edit Smartphone</Text>
       </RectButton>
     </View>
   )

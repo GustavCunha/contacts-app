@@ -34,8 +34,8 @@ function WalletDetails(){
     return(
         <View style={styles.container}>
             <Header title="Detalhes" left={(
-                <RectButton style={{position: 'absolute', left: 25, top: 35}} onPress={handleToBack}>
-                    <FontAwesome5 name="arrow-left" size={24} color="#FFF" />
+                <RectButton style={{position: 'absolute', left: 25, top: 50}} onPress={handleToBack}>
+                    <FontAwesome5 name="arrow-left" size={28} color="#FFF" />
                 </RectButton>
             )}/>
 
@@ -57,7 +57,7 @@ function WalletDetails(){
 
             <RectButton style={styles.button} onPress={handlePage404}>
                 <MaterialIcons name="edit" size={24} color="#FAFAFA"/>
-                <Text style={styles.textButton}>Edit Contact</Text>
+                <Text style={styles.textButton}>Edit Wallet</Text>
             </RectButton>
 
         </View>

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         justifyContent: "center", 
         alignItems: "center",
         flexDirection: 'row',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
     textButton:{
         marginLeft: 10,

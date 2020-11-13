@@ -67,7 +67,7 @@ export default function AppTab(){
                         tabBarLabel: 'Leonardo',
                         tabBarIcon: () => {
                             return(
-                                <MaterialIcons name="contacts" size={20} color="#7D3F53" />
+                                <MaterialIcons name="smartphone" size={20} color="#7D3F53" />
                             )
                         }
                     }}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Modal } from 'react-native';
+import { View, Text, Image, Modal, ScrollView } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { FontAwesome5, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -41,7 +41,7 @@ function HomeDetails(){
                 </RectButton>
             )}/>
 
-            <View style={styles.main}>
+            <ScrollView style={styles.main}>
                 <View style={styles.mainBox1}>
                     <Image style={styles.image} source={{uri: params.avatar}}/>
                     <Text style={styles.textBox1}>{params.name}</Text>
@@ -58,7 +58,7 @@ function HomeDetails(){
                     <LineInfo icon="email" text={params.email} />
                     <LineInfo icon="location-on" text={params.address} />
                 </View>
-            </View>
+            </ScrollView>
 
             <RectButton style={styles.button} onPress={handlePage404}>
                 <MaterialIcons name="edit" size={24} color="#FAFAFA"/>
